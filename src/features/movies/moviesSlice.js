@@ -14,11 +14,11 @@ const initialState = {
 
 export const fetchAllMovies = createAsyncThunk(
   "movies/fetchAllMovies",
-  async () => {
+  async (term) => {
     try {
       const movieText = "Harry";
       const response = await movieApi.get(
-        `?apiKey=${APIKey}&s=${movieText}&type=movie`,
+        `?apiKey=${APIKey}&s=${term}&type=movie`,
       );
       return response.data;
     } catch (err) {
@@ -29,11 +29,11 @@ export const fetchAllMovies = createAsyncThunk(
 
 export const fetchAllShows = createAsyncThunk(
   "movies/fetchAllShows",
-  async () => {
+  async (term) => {
     try {
       const showText = "Friends";
       const response = await movieApi.get(
-        `?apiKey=${APIKey}&s=${showText}&type=series`,
+        `?apiKey=${APIKey}&s=${term}&type=series`,
       );
       return response.data;
     } catch (err) {

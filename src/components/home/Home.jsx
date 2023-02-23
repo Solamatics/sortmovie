@@ -7,9 +7,12 @@ import { fetchAllMovies, fetchAllShows } from "../../features/movies/moviesSlice
 const Home = () => {
   const dispatch = useDispatch();
 
+  const moviesText ="Harry";
+  const showsText = "Friends"
+
   useEffect(() => {
-    dispatch(fetchAllMovies());
-    dispatch(fetchAllShows());
+    dispatch(fetchAllMovies(moviesText));
+    dispatch(fetchAllShows(showsText));
   }, []);
 
   return (
