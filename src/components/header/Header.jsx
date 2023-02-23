@@ -13,9 +13,6 @@ const Header = () => {
 
   const dispatch = useDispatch();
 
-  const movieText = "Harry";
-  const showText = "Friends";
-
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(fetchAllShows(term));
