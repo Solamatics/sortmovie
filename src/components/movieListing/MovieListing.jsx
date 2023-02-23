@@ -47,9 +47,9 @@ const MovieListing = () => {
       </div>
 
       {/*shows*/}
-      <div className="movie-list">
+      <div className="show-list">
         <h2>Shows</h2>
-        <div className="movie-container">{renderShows}</div>
+        <div className="show-container">{renderShows}</div>
       </div>
     </div>
   );
